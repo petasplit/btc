@@ -94,7 +94,7 @@ def worker(queue):
 def process(data):
     private_key = data[0]
     address = data[1]
-    urlblock = "https://bitcoin.atomicwallet.io/address/" + str(address)
+    urlblock = "https://blockchair.com/bitcoin/address/" + str(address)
     respone_block = requests.get(urlblock)
     byte_string = respone_block.content
     source_code = html.fromstring(byte_string)
