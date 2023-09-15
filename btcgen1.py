@@ -110,7 +110,7 @@ def worker(queue):
         process_and_save(data)
 
 def main():
-    num_threads = multiprocessing.cpu_count()
+    num_threads = multiprocessing.cpu_count(3)
     num_processes = num_threads // 2  # Use half of the available threads for processing
     data_queue = multiprocessing.Queue()
 
